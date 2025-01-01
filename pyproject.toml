@@ -3,7 +3,29 @@ name = "pr-was-node-suite-comfyui-47064894"
 description = ""
 version = "1.0.2"
 license = { file = "LICENSE" }
-dependencies = ["cmake", "fairscale>=0.4.4", "git+https://github.com/WASasquatch/img2texture.git", "git+https://github.com/WASasquatch/cstr", "gitpython", "imageio", "joblib", "matplotlib", "numba", "numpy", "opencv-python-headless[ffmpeg]<=4.7.0.72", "pilgram", "git+https://github.com/WASasquatch/ffmpy.git", "rembg", "scikit-image>=0.20.0", "scikit-learn", "scipy", "timm>=0.4.12", "tqdm", "transformers"]
+dependencies = [
+  "cmake",
+  "fairscale>=0.4.4",
+  # 기존 "git+https://..."를 pep508 형식으로 수정:
+  "img2texture @ git+https://github.com/WASasquatch/img2texture.git",
+  "cstr @ git+https://github.com/WASasquatch/cstr",
+  "gitpython",
+  "imageio",
+  "joblib",
+  "matplotlib",
+  "numba",
+  "numpy",
+  "opencv-python-headless[ffmpeg]<=4.7.0.72",
+  "pilgram",
+  "ffmpy @ git+https://github.com/WASasquatch/ffmpy.git",
+  "rembg",
+  "scikit-image>=0.20.0",
+  "scikit-learn",
+  "scipy",
+  "timm>=0.4.12",
+  "tqdm",
+  "transformers"
+]
 
 [project.urls]
 Repository = "https://github.com/WASasquatch/was-node-suite-comfyui"
